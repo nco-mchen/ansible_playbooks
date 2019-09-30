@@ -1,5 +1,6 @@
 - name: Test Yum Update
   hosts: all
+  become: yess
   gather_facts: no
   tasks:
     - name: Upgrade all packages
