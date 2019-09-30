@@ -3,8 +3,9 @@
   become: yes
   gather_facts: false
   tasks:
+    - name: Yum clean all
+      shell: yum clean all    
     - name: Upgrade all packages
-      shell: yum clean all
       yum:
         name: '*'
         state: latest
