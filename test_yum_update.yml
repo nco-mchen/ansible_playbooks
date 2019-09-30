@@ -5,4 +5,7 @@
   tasks:
     - name: Upgrade all packages
       shell: yum clean all
-
+      shell: rhn_check
+      yum:
+        name: '*'
+        state: latest
