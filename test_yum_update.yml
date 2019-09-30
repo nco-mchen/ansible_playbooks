@@ -5,6 +5,4 @@
   tasks:
     - name: Upgrade all packages
       shell: yum clean all
-      yum:
-        name: '*'
-        state: latest
+
