@@ -4,7 +4,9 @@
   gather_facts: false
   tasks:
     - name: Yum clean all
-      shell: yum clean all    
+      shell: yum clean all  
+    - name: RHN check
+      shell: rhn_check
     - name: Upgrade all packages
       yum:
         name: '*'
