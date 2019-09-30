@@ -4,7 +4,7 @@
   gather_facts: false
   tasks:
     - name: Upgrade all packages
-      shell: yum clean all && rhn_check
+      shell: yum clean all
       yum:
         name: '*'
         state: latest
