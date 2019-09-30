@@ -1,4 +1,5 @@
-- hosts: localhost
+- name: Test Yum Update
+  hosts: all
   gather_facts: no
   tasks:
     - name: Upgrade all packages
