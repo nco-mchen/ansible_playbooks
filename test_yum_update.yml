@@ -7,7 +7,7 @@
     - name: Yum clean all
       shell: yum clean all  
     - name: RHN check
-      shell: /usr/sbin/rhn_check
+      command: /usr/sbin/rhn_check
     - name: Upgrade all packages
       yum:
         name: '*'
