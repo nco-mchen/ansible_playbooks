@@ -4,10 +4,10 @@
   become_user: sysadm
   gather_facts: false
   tasks:
-    - name: Yum clean all
-      command: yum clean all  
-    - name: RHN check
-      command: /usr/sbin/rhn_check
+#    - name: Yum clean all
+#      command: yum clean all  
+#    - name: RHN check
+#      command: /usr/sbin/rhn_check
     - name: Upgrade all packages
       yum:
         name: '*'
