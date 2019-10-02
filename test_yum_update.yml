@@ -10,7 +10,7 @@
 #        warn: false
 #      become: true
 #      any_errors_fatal: false
-    - name: RHN profile sync
+##    - name: RHN profile sync
       command: rhn-profile-sync
       become: true
 #    - name: RHN check
@@ -23,4 +23,5 @@
 #      yum:
 #        name: '*'
 #        state: latest
+#        exclude: 'kernal*'
 
