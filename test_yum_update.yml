@@ -13,6 +13,7 @@
     - name: RHN profile sync
       command: /usr/sbin/rhn-profile-sync
       become: true
+      become_method: sudo
       become_user: sysadm
 #    - name: RHN check
 #      command: /usr/sbin/rhn_check
