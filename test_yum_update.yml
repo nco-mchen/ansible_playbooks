@@ -20,9 +20,9 @@
       yum:
         name: 'kernel*'
         state: latest
-    - name: Upgrade everything else
-      yum:
-        name: '*'
-        state: latest
-        exclude: 'kernal*'
+#    - name: Upgrade everything else
+#      yum:
+#        name: '*'
+#        state: latest
+#        exclude: 'kernal*'
 
