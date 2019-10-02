@@ -1,6 +1,5 @@
 - name: Test Yum Update
-  hosts: all
-  become: yes
+  hosts: all  
   become_user: sysadm
   gather_facts: false
   tasks:
@@ -8,6 +7,7 @@
       command: yum clean all
       args:
         warn: false
+      become: true  
 #    - name: RHN check
 #      command: /usr/sbin/rhn_check
 #    - name: Upgrade all packages
