@@ -11,7 +11,7 @@
 #      become: true
 #      any_errors_fatal: false
     - name: RHN profile sync
-      raw: /usr/sbin/rhn-profile-sync
+      shell: /usr/sbin/rhn-profile-sync
       become: true
       become_user: sysadm
 #    - name: RHN check
