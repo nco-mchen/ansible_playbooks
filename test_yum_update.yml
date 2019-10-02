@@ -2,7 +2,7 @@
   hosts: all
   become: true
   become_user: sysadm
-  gather_facts: yes
+  gather_facts: no
   tasks:
 #    - name: Yum clean all
 #      shell: yum clean all
@@ -11,9 +11,8 @@
 #      become: true
 #      any_errors_fatal: false
     - name: RHN profile sync
-      command: /usr/sbin/rhn-profile-sync
+      raw: /usr/sbin/rhn-profile-sync
       become: true
-      become_method: sudo
       become_user: sysadm
 #    - name: RHN check
 #      command: /usr/sbin/rhn_check
