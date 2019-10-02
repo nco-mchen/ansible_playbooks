@@ -4,17 +4,23 @@
   become_user: sysadm
   gather_facts: no
   tasks:
-    - name: Yum clean all
-      shell: yum clean all
-      args:
-        warn: false
+#    - name: Yum clean all
+#      shell: yum clean all
+#      args:
+#        warn: false
+#      become: true
+#      any_errors_fatal: false
+    - name: RHN profile sync
+      command: rhn-profile-sync
       become: true
-      any_errors_fatal: false
-#    - name: RHN profile sync
-#      command: rhn-profile-sync
 #    - name: RHN check
 #      command: /usr/sbin/rhn_check
-#    - name: Upgrade all packages
+#    - name: Upgrade kernel
+#      yum:
+#        name: 'kernel*'
+#        state: latest
+#    - name: Upgrade everything else
 #      yum:
 #        name: '*'
 #        state: latest
+
