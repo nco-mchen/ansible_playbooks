@@ -5,7 +5,9 @@
   gather_facts: false
   tasks:
     - name: Yum clean all
-      command: yum clean all  
+      command: yum clean all
+      args:
+        warn: false
 #    - name: RHN check
 #      command: /usr/sbin/rhn_check
 #    - name: Upgrade all packages
