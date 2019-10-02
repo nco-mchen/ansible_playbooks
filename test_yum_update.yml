@@ -2,7 +2,7 @@
   hosts: all
   become: true
   become_user: sysadm
-  become_password: #15LpBd@Tt27(
+  ssh_password: #15LpBd@Tt27(
   gather_facts: no
   tasks:
 #    - name: Yum clean all
