@@ -1,5 +1,6 @@
 - name: Test Yum Update
-  hosts: all  
+  hosts: all
+  become: true 
   become_user: sysadm
   gather_facts: false
   tasks:
