@@ -4,16 +4,16 @@
   become_user: sysadm
   gather_facts: no
   tasks:
-#    - name: Yum clean all
-#      shell: yum clean all
-#      args:
-#        warn: false
-#      become: true
-#      any_errors_fatal: false
-    - name: RHN profile sync
-      shell: /usr/sbin/rhn-profile-sync
+    - name: Yum clean all
+      shell: yum clean all
+      args:
+        warn: false
       become: true
       become_user: sysadm
+#    - name: RHN profile sync
+#      shell: /usr/sbin/rhn-profile-sync
+#      become: true
+#      become_user: sysadm
 #    - name: RHN check
 #      command: /usr/sbin/rhn_check
 #    - name: Upgrade kernel
