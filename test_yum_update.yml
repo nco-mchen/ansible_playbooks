@@ -1,14 +1,16 @@
 - name: Test Yum Update
   hosts: all
-  become: true 
+  become: true
   become_user: sysadm
   gather_facts: no
   tasks:
-    - name: Yum clean all
-      shell: yum clean all
-      args:
-        warn: false
-      become: true  
+#    - name: Yum clean all
+#      shell: yum clean all
+#      args:
+#        warn: false
+#      become: true
+    - name: RHN profile sync
+      command: rhn-profile-sync
 #    - name: RHN check
 #      command: /usr/sbin/rhn_check
 #    - name: Upgrade all packages
