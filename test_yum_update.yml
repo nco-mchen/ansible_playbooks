@@ -2,7 +2,7 @@
   hosts: all
   become: true
   become_user: sysadm
-  gather_facts: no
+  gather_facts: yes
   tasks:
 #    - name: Yum clean all
 #      shell: yum clean all
