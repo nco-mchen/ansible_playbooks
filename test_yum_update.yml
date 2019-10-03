@@ -21,4 +21,7 @@
         name: '*'
         state: latest
         exclude: 'kernel*'
-
+#    - name: reboot
+#      shell: shutdown -r now
+#      when: upgraded.changed
+#      register: reboot
