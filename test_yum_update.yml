@@ -8,10 +8,8 @@
       shell: yum clean all
       args:
         warn: false
-#    - name: RHN profile sync
-#      shell: /usr/sbin/rhn-profile-sync
-#      become: true
-#      become_user: sysadm
+    - name: RHN profile sync
+      shell: /usr/sbin/rhn-profile-sync
 #    - name: RHN check
 #      command: /usr/sbin/rhn_check
 #    - name: Upgrade kernel
