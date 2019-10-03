@@ -1,7 +1,7 @@
 - name: Test Yum Update
   hosts: all
   become: true
-  beccome_user: root
+  become_user: root
   gather_facts: no
   tasks:
 #    - name: Yum clean all
