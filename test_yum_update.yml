@@ -4,18 +4,18 @@
   become_user: root
   gather_facts: no
   tasks:
-#    - name: Yum clean all
-#      shell: yum clean all
-#      args:
-#        warn: false
-#    - name: RHN profile sync
-#      shell: /usr/sbin/rhn-profile-sync
-#    - name: RHN check
-#      command: /usr/sbin/rhn_check
-#    - name: Upgrade kernel
-#      yum:
-#        name: kernel
-#        state: latest
+    - name: Yum clean all
+      shell: yum clean all
+      args:
+        warn: false
+    - name: RHN profile sync
+      shell: /usr/sbin/rhn-profile-sync
+    - name: RHN check
+      command: /usr/sbin/rhn_check
+    - name: Upgrade kernel
+      yum:
+        name: kernel
+        state: latest
     - name: Upgrade everything else
       yum:
         name: '*'
