@@ -13,9 +13,9 @@
 #    - name: RHN check
 #      command: /usr/sbin/rhn_check
 #    - name: Upgrade kernel
-      yum:
-        name: 'kernel'
-        state: latest
+    yum:
+      name: kernel
+      state: latest
 #    - name: Upgrade everything else
 #      yum:
 #        name: '*'
