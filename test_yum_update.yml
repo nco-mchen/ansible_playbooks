@@ -12,13 +12,13 @@
 #      shell: /usr/sbin/rhn-profile-sync
 #    - name: RHN check
 #      command: /usr/sbin/rhn_check
-    - name: Upgrade kernel
-      yum:
-        name: kernel
-        state: latest
-#    - name: Upgrade everything else
+#    - name: Upgrade kernel
 #      yum:
-#        name: '*'
+#        name: kernel
 #        state: latest
-#        exclude: 'kernal*'
+    - name: Upgrade everything else
+      yum:
+        name: '*'
+        state: latest
+        exclude: 'kernal*'
 
