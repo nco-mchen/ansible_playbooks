@@ -9,6 +9,7 @@
     fetch: 
       src: /root/.bashrc 
       dest: buffer/ flat=yes
+      fail_on_missing: no
   - name: Copy the file from master to mwiapp02
     copy: 
       src: buffer/.bashrc 
