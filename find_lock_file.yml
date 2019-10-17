@@ -1,0 +1,10 @@
+- hosts: all
+  tasks:
+  - name: Ansible find file examples
+    find:
+      paths: /home/mdtutorials2/findmodule/examples
+      patterns: "*.txt"
+      register: files_matched
+
+  - debug:
+      msg: "{{ files_matched.files }}"
