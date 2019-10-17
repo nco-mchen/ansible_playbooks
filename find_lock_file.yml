@@ -9,5 +9,3 @@
     src: /root/.bashrc
     dest: /tmp/fetched
     fail_on_missing: no
-  register: fetch_output
-- debug: var=fetch_output
