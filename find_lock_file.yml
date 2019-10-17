@@ -4,8 +4,10 @@
   become_user: root
   gather_facts: no
   tasks:
-  - name: Fetch the file from the mwiapp01 to master
-    synchronize:
-      mode: pull
-      src: /root/.bashrc
-      dest: /tmp/fetched
+- name: Store file into /tmp/fetched/host.example.com/tmp/somefile
+  fetch:
+    src: /root/.bashrc
+    dest: /tmp/fetched
+    fail_on_missing: no
+  register: fetch_output
+  - debug: var=fetch_outpu
