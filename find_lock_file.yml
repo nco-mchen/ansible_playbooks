@@ -7,5 +7,5 @@
   - name: Store file into /tmp/fetched/host.example.com/tmp/somefile
     fetch:
       src: /root/.bashrc
-      dest: /tmp/fetched
+      dest: /tmp/fetched/
       fail_on_missing: no
