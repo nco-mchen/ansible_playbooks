@@ -1,4 +1,8 @@
-- hosts: all
+- name: Find lock file and print
+  hosts: all
+  become: true
+  become_user: root
+  gather_facts: no
   tasks:
   - name: Ansible find file examples
     find:
