@@ -6,8 +6,11 @@
   tasks:
   - name: Fetch the file from the mwiapp01 to master
     run_once: yes
-    fetch: src=/root/.bashrc dest=buffer/ flat=yes
-
+    fetch: 
+      src: /root/.bashrc 
+      dest: buffer/ flat=yes
   - name: Copy the file from master to mwiapp02
-    copy: src=buffer/.bashrc dest=/tmp/
+    copy: 
+      src: buffer/.bashrc 
+      dest: /tmp/
     when: "ansible_hostname == 'nco-lw7-mchen.ncep.noaa.gov'"
