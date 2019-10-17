@@ -8,4 +8,5 @@
     fetch:
       src: /root/.bashrc
       dest: /tmp/fetched/
+      flat: yes
       fail_on_missing: no
