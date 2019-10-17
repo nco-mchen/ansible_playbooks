@@ -10,4 +10,4 @@
 
   - name: Copy the file from master to mwiapp02
     copy: src=buffer/.bashrc dest=/tmp/
-    when: "{{ ansible_hostname == 'nco-lw7-mchen.ncep.noaa.gov' }}"
+    when: "ansible_hostname == 'nco-lw7-mchen.ncep.noaa.gov'"
