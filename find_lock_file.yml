@@ -4,8 +4,8 @@
   become_user: root
   gather_facts: no
   tasks:
-- name: Store file into /tmp/fetched/host.example.com/tmp/somefile
-  fetch:
-    src: /root/.bashrc
-    dest: /tmp/fetched
-    fail_on_missing: no
+  - name: Store file into /tmp/fetched/host.example.com/tmp/somefile
+    fetch:
+      src: /root/.bashrc
+      dest: /tmp/fetched
+      fail_on_missing: no
