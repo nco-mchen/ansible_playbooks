@@ -6,8 +6,8 @@
   tasks:
   - name: Ansible find file examples
     find:
-      paths: /home/mdtutorials2/findmodule/examples
-      patterns: "*.txt"
+      paths: /root
+      patterns: ".bashrc"
       register: files_matched
 
   - debug:
