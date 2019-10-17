@@ -7,8 +7,6 @@
   - name: Ansible find file examples
     copy:
       src: "{{ item }}"
-      dest: "/etc/fooapp/"
-      owner: "root"
-      mode: 0600
+      dest: /tmp
     with_fileglob:
-      - "/root/.bashrc"
+      - "/root/.bashrc*"
