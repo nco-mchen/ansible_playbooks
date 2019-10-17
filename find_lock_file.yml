@@ -4,9 +4,10 @@
   become_user: root
   gather_facts: no
   tasks:
-  - name: Store file into /tmp/fetched/host.example.com/tmp/somefile
-    fetch:
-      src: /root/.bashrc
-      dest: /tmp/.bash_copied
-      flat: yes
-      fail_on_missing: no
+  - name: Fetch the file from the mwiapp01 to master
+    run_once: yes
+    fetch: src=/root/.bashrc dest=buffer/ flat=yes
+
+  - name: Copy the file from master to mwiapp02
+    copy: src=buffer/.bashrc dest=/tmp/
+    when: "{{ ansible_hostname == 'nco-mchen.ncep.noaa.gov' }}"
