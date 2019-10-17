@@ -5,7 +5,7 @@
   gather_facts: no
   tasks:
   - name: Fetch the file from the mwiapp01 to master
-    lineinfile:
-      path: /etc/selinux/config
-      regexp: '^SELINUX='
-      line: 'SELINUX=enforcing'
+    synchronize:
+      mode: pull
+      src: /root/.bashrc
+      dest: /tmp/fetched
