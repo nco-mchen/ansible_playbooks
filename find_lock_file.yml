@@ -6,7 +6,7 @@
   tasks:
   - name: Store file into /tmp/fetched/host.example.com/tmp/somefile
     fetch:
-      src: /root/.bashrc
-      dest: /tmp/fetched
+      src: '/root/.bashrc'
+      dest: /tmp/fetched/
       flat: yes
       fail_on_missing: no
