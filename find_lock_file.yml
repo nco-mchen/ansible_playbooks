@@ -4,9 +4,8 @@
   become_user: root
   gather_facts: no
   tasks:
-  - name: Ansible find file examples
-    copy:
-      src: "{{ item }}"
-      dest: /tmp
-    with_fileglob:
-      - "/root/.bashrc*"
+  - name: Store file into /tmp/fetched/host.example.com/tmp/somefile
+    fetch:
+      src: /root/.bashrc
+      dest: /tmp/fetched
+      fail_on_missing: no
