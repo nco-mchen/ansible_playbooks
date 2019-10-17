@@ -5,9 +5,10 @@
   gather_facts: no
   tasks:
   - name: Ansible find file examples
-    find:
-      paths: /root
-      patterns: '.bashrc'
-    register: files_matched
-  - debug:
-      msg: "{{ files_matched.files }}"
+    copy:
+      src: "/root/.bashrc"
+      dest: "/etc/fooapp/"
+      owner: "root"
+      mode: 0600
+    with_fileglob:
+      - "/playbooks/files/fooapp/*"
