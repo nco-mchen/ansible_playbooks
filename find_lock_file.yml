@@ -6,9 +6,9 @@
   tasks:
   - name: Ansible find file examples
     copy:
-      src: "/root/.bashrc"
+      src: "/root"
       dest: "/etc/fooapp/"
       owner: "root"
       mode: 0600
     with_fileglob:
-      - "/playbooks/files/fooapp/*"
+      - ".bashrc"
