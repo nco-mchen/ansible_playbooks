@@ -8,7 +8,6 @@
     find:
       paths: /root
       patterns: '.bashrc'
-      register: files_matched
-
+    register: files_matched
   - debug:
       msg: "{{ files_matched.files }}"
