@@ -7,7 +7,7 @@
   - name: Ansible find file examples
     find:
       paths: /root
-      patterns: ".bashrc"
+      patterns: '.bashrc'
       register: files_matched
 
   - debug:
