@@ -6,6 +6,6 @@
   tasks:
   - name: Store file into /tmp/fetched/host.example.com/tmp/somefile
     fetch:
-      src: /root/.bashrc
+      src: /var/lib/puppet/state/agent_disabled.lock
       dest: /tmp/fetched/
       fail_on_missing: no
