@@ -1,4 +1,4 @@
-- name: Find lock file and print
+- name: Install BESMon
   hosts: all
   become: true
   become_user: root
