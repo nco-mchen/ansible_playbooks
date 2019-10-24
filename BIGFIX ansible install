@@ -4,8 +4,12 @@
   become_user: root
   gather_facts: no
 tasks:
-- name: Stop the BigFix client process
-  service:
-    name: BESClient
-    state: stopped
-
+#- name: Stop the BigFix client process
+#  service:
+#    name: BESClient
+#    state: stopped
+- name: Yum install BESAgent
+  yum:
+    name: BESAgent
+    state: latest
+  
