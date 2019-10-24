@@ -40,3 +40,6 @@ tasks:
 #    owner: foo
 #    group: foo
 # mode: '0644'
+- name: Start Big Fix client
+  shell: /etc/init.d/besclient start
+
