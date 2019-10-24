@@ -12,4 +12,31 @@ tasks:
   yum:
     name: BESAgent
     state: latest
-  
+- name: Copy file with owner and permissions
+  copy:
+    src: /usr1/sysadmin/actionsite.afxm
+    dest: /etc/opt/BESClient/actionsite.afxm
+#    owner: foo
+#    group: foo
+# mode: '0644'
+- name: Copy file with owner and permissions
+  copy:
+    src: /usr1/sysadmin/besclient.config
+    dest: /var/opt/BESClient/besclient.config
+#    owner: foo
+#    group: foo
+# mode: '0644'
+- name: Copy file with owner and permissions
+  copy:
+    src: /usr1/sysadmin/besclient.config
+    dest: /var/opt/BESClient/besclient.config.nco
+#    owner: foo
+#    group: foo
+# mode: '0644'
+- name: Copy file with owner and permissions
+  copy:
+    src: /usr1/sysadmin/dcid.skey
+    dest: /opt/BESClient/bin/dcid.skey
+#    owner: foo
+#    group: foo
+# mode: '0644'
