@@ -10,4 +10,5 @@
   - name: copy the output to a local file
     copy:
       content: "{{ myshell_output.stdout }}"
-      dest: "/usr1/sysadm"
+      dest: "/usr1/sysadm/hello"
+      touch: yes
