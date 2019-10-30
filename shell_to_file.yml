@@ -7,5 +7,11 @@
   - name: shell command
     shell: 'cut -f 1 -d: /etc/passwd | sudo xargs -n 1 -I {} bash -c "echo {}; chage -l {}"'
     register: myshell_output
-  - local_action: lineinfile line={{ myshell_output }} path=/tmp/hello1.txt
-    sudo: no
+  - local_action:
+      module: copy
+      content: "{{ myshell_output | to_nice_json }}"
+      sudo: no
+      dest: /tmp/hello1.txt
+    connection: local
+#  - local_action: lineinfile line={{ myshell_output }} path=/tmp/hello1.txt
+#    sudo: no
