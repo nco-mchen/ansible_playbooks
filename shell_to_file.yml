@@ -7,6 +7,6 @@
   - name: shell command
     shell: 'cut -f 1 -d: /etc/passwd | sudo xargs -n 1 -I {} bash -c "echo {}; chage -l {}"'
     register: myshell_output
-    sudo: yes
+    become: yes
 #  - local_action: lineinfile line={{ myshell_output }} path=/tmp/hello.txt
 #    sudo: no
