@@ -15,5 +15,5 @@
 #  #      become_user: sysadm
 #  #      dest: /tmp/hello1.txt
 #  #    connection: local
-#    - local_action: lineinfile line={{ myshell_output | to_nice_json}} path=/tmp/hello1.txt
-#        sudo: no
+    - local_action: lineinfile line={{ myshell_output | to_nice_json}} path=/tmp/hello1.txt
+        sudo: no
