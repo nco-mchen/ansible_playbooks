@@ -4,23 +4,23 @@
   become_user: root
   gather_facts: no
   tasks:
-#    - name: Yum clean all
-#      shell: yum clean all
-#      args:
-#        warn: false
-#    - name: RHN profile sync
-#      shell: /usr/sbin/rhn-profile-sync
-#    - name: RHN check
-#      command: /usr/sbin/rhn_check
+    - name: Yum clean all
+      shell: yum clean all
+      args:
+        warn: false
+    - name: RHN profile sync
+      shell: /usr/sbin/rhn-profile-sync
+    - name: RHN check
+      command: /usr/sbin/rhn_check
     - name: Upgrade kernel
       yum:
         name: 'kernel*'
         state: latest
-#    - name: Upgrade everything else
-#      yum:
-#        name: '*'
-#        state: latest
-#        exclude: 'kernel*'
+    - name: Upgrade everything else
+      yum:
+        name: '*'
+        state: latest
+        exclude: 'kernel*'
     - name: reboot
       reboot:
         reboot_timeout: 320
